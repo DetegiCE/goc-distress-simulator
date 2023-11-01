@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="device">
+            <div id="left">
+                <div id="speaker">
+                    SPEAKER
+                </div>
+                <div id="distress">
+                    <button>DISTRESS</button>
+                </div>
+            </div>
+            <div id="center">
+                <div id="screen">
+                    VHF SIMULATOR
+                    <div id="innerscreen">
+                        <span id="l1">A</span><br>
+                        <span id="l2">A</span><br>
+                        <span id="l3">A</span><br>
+                        <span id="l4">A</span><br>
+                        <span id="l5">A</span><br>
+                        <span id="l6">A</span><br>
+                        <span id="l7">A</span><br>
+                        <span id="l8">A</span>
+                    </div>
+                </div>
+                <div id="fbutton">
+                    <button></button>
+                    <button></button>
+                    <button id="bup">▲</button>
+                    <button id="bdown">▼</button>
+                    <button id="bf">F</button>
+                </div>
+            </div>
+            <div id="right">
+                <div id="numpad">
+                    <button id="b1">1</button>
+                    <button id="b2">2</button>
+                    <button id="b3">3</button>
+                    <button id="b4">4</button>
+                    <button id="b5">5</button>
+                    <button id="b6">6</button>
+                    <button id="b7">DSC<br>7</button>
+                    <button id="b8">8</button>
+                    <button id="b9">9</button>
+                    <button id="besc">ESC</button>
+                    <button id="b0">0</button>
+                    <button id="bent">ENT</button>
+                </div>
+                <div id="vols">
+                    <button id="bsol">SOL</button>
+                    <button id="bvol">VOL</button>
+                </div>
+            </div>
+        </div>
+        <div id="mic">
+            <button id="bptt">PTT</button>
+        </div>
+    </div>
+    <div id="ptttext">
+        <textarea name="ptttext" id="ptttext" cols="30" rows="5" readonly="true"></textarea>
+    </div>
+    <div id="container2">
+        전파전자통신자격에서 사용되는 기능만 구현되어있습니다.<br>
+        해당 단계의 순서대로 하지 않으면 작동하지 않습니다.<br>
+    </div>
+</body>
+</html>
