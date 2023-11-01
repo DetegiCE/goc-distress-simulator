@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <div id="container">
@@ -15,45 +14,46 @@
                     SPEAKER
                 </div>
                 <div id="distress">
-                    <button>DISTRESS</button>
+                    <button id="bdistress" onclick="bdistress()">DISTRESS</button>
                 </div>
             </div>
             <div id="center">
                 <div id="screen">
                     VHF SIMULATOR
                     <div id="innerscreen">
-                        <span id="l1">A</span><br>
-                        <span id="l2">A</span><br>
-                        <span id="l3">A</span><br>
-                        <span id="l4">A</span><br>
-                        <span id="l5">A</span><br>
-                        <span id="l6">A</span><br>
-                        <span id="l7">A</span><br>
-                        <span id="l8">A</span>
+                        <div id="l1" class="ist tright">01/11/23</div>
+                        <div id="l2" class="ist thalf">UTC 12:30</div>
+                        <div id="l3" class="ist thalf">&nbsp;1W</div>
+                        <div id="l4" class="ist thalf">ITU</div>
+                        <div id="l5" class="ist thalf">SIM</div>
+                        <div id="l6" class="ist"></div>
+                        <div id="l7" class="ist"></div>
+                        <div id="l8" class="ist colrev">&nbsp;&nbsp;ENTER POSITION!!!&nbsp;&nbsp;</div>
+                        <div id="lchan" class="colrev">70</div>
                     </div>
                 </div>
                 <div id="fbutton">
                     <button></button>
                     <button></button>
-                    <button id="bup">▲</button>
-                    <button id="bdown">▼</button>
-                    <button id="bf">F</button>
+                    <button id="bup" onclick="bup()">▲</button>
+                    <button id="bdown" onclick="bdown()">▼</button>
+                    <button id="bf" onclick="bf()">F</button>
                 </div>
             </div>
             <div id="right">
                 <div id="numpad">
-                    <button id="b1">1</button>
-                    <button id="b2">2</button>
-                    <button id="b3">3</button>
-                    <button id="b4">4</button>
-                    <button id="b5">5</button>
-                    <button id="b6">6</button>
-                    <button id="b7">DSC<br>7</button>
-                    <button id="b8">8</button>
-                    <button id="b9">9</button>
-                    <button id="besc">ESC</button>
-                    <button id="b0">0</button>
-                    <button id="bent">ENT</button>
+                    <button id="b1" onclick="b1()">H/L<br>1<br>&nbsp;</button>
+                    <button id="b2">CH<br>2<br>ABC</button>
+                    <button id="b3">WX<br>3<br>DEF</button>
+                    <button id="b4">SCAN<br>4<br>GHI</button>
+                    <button id="b5">DW<br>5<br>JKL</button>
+                    <button id="b6">P<br>6<br>MNO</button>
+                    <button id="b7" onclick="b7()">DSC<br>7<br>PQR</button>
+                    <button id="b8">SP<br>8<br>STU</button>
+                    <button id="b9">SET<br>9<br>VWX</button>
+                    <button id="besc" onclick="besc()">ESC</button>
+                    <button id="b0">ACK<br>0<br>YZ</button>
+                    <button id="bent" onclick="bent()">ENT</button>
                 </div>
                 <div id="vols">
                     <button id="bsol">SOL</button>
@@ -62,15 +62,36 @@
             </div>
         </div>
         <div id="mic">
-            <button id="bptt">PTT</button>
+            <button id="bptt" onclick="bptt()">PTT</button>
         </div>
     </div>
-    <div id="ptttext">
-        <textarea name="ptttext" id="ptttext" cols="30" rows="5" readonly="true"></textarea>
+    <div id="cont2">
+        <div id="ptttext">
+            Talk 입력 (PTT 클릭 후 활성화)
+            <textarea name="ptttextr" id="ptttextr" cols="30" rows="5" readonly="true"></textarea>
+        </div>
+        <div id="container2">
+            전파전자통신자격에서 사용되는 기능만 구현되어있습니다.<br>
+            해당 단계의 순서대로 하지 않으면 작동하지 않습니다.<br>
+            <strong style="color: red;">실제 DISTRESS 버튼은 3초간 눌러야 하나, 구현 상 바로 눌러도 넘어가집니다.</strong>
+            <br>
+            <strong style="color: limegreen">다음 버튼을 누르면 입력한 Talk이 초기화 되며 다음 문항으로 넘어갑니다.</strong>
+            <br>
+            <strong style="color: blue">F를 누르면 랜덤 문제가 나옵니다. (현재는 공개 문제 1개만 등록됨)</strong>
+        </div>
+        <div id="problem">
+            <ul id="current">
+                <li id="c1" style="background-color: limegreen;">조난경보</li>
+                <li id="c2">조난호출</li>
+                <li id="c3">조난통보</li>
+                <li id="c4">전화송화</li>
+            </ul>
+            <div id="announce">
+            </div>
+            <button id="nextbtn" onclick="bnextbtn()">다음</button>
+            
+        </div>
     </div>
-    <div id="container2">
-        전파전자통신자격에서 사용되는 기능만 구현되어있습니다.<br>
-        해당 단계의 순서대로 하지 않으면 작동하지 않습니다.<br>
-    </div>
+    <script src="script.js"></script>
 </body>
 </html>
